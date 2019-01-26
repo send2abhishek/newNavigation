@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage
+    xmlns="http://xamarin.com/schemas/2014/forms" Title="My App"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:NavigationApp" IsPresented = "True"
+             x:Class="NavigationApp.MainPage">
+    <MasterDetailPage.Master >
+        <ContentPage Title="My App">
+
+
+            <StackLayout HorizontalOptions="Center">
+
+                <ListView x:Name="myList" ItemTapped="MyList_ItemTapped">
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Fname}" FontSize="Medium"/>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+        </ContentPage>
+
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <ContentPage />
+    </MasterDetailPage.Detail>
+</MasterDetailPage>
